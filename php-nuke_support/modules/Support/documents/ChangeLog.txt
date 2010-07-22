@@ -1,0 +1,260 @@
+/***************************************************************************
+File Name 	: ChangeLog.txt
+Domain		: http://www.PHPSupportTickets.com/
+----------------------------------------------------------------------------
+Author		: Ian Warner
+Copyright	: (C) 2001 Triangle Solutions Ltd
+Email		: iwarner@triangle-solutions.com
+URL		: http://www.triangle-solutions.com/
+Description	: Describes changes made to the application
+Date Created	: Saturday 21 August 2004 10:21:03
+File Version	: 1.8c
+\\||************************************************************************/
+
+ChangeLog
+----------------------------------------------------------------------------
+
+Saturday 21 August 2004 10:21:11
+----------------------------------------------------------------------------
++	Released Version 1.8c - this fixes a lot of bugs and probably creates
+	new ones - though the SMTP area has been vastly improved. Go to the
+	Forum to leave comments please.
+
+Sunday 01 August 2004 11:56:18
+----------------------------------------------------------------------------
++	Changed the session names again to be more unique from other systems.
++	Changed some includes to include_once as this will not cause an error
+	if trying to include the same file again.
+
+Wednesday 28 July 2004 22:05:46
+----------------------------------------------------------------------------
++	Changed the Session Idenifier for the Username and Password on the
+	user side so it cant clash with the admin side.
++	Added clean to new tickets.
+
+Saturday 24 July 2004 13:08:16
+----------------------------------------------------------------------------
++	Added a cleaning function to stop tagged code going into the form
+	boxes - so no-one can enter HTML or Javascript especially.
++	If magic quotes are off then need to use ADDSLASHES on the queries
+	this may cause some issues in the short term of finding places where
+	I may need to add them and then strip them. If you spot some errors
+	in this then let me know please.
++	Found some cool javascript that places the focus on the first form
+	element on any page. Great for dynamic pages with one header file.
++	Removed a lot of table border elements as now using CSS boxborder tag.
++	Added in different methods to send through, probably been causing most
+	of the SMTP issues, now you can send through normal PHP mail, sendmail
+	SMTP still and Qmail, just change the setting in the config.
++	Removed all comments on database calls so you can see more clearly whats
+	going on when it errors.
++	Changed the way the buttons work with CSS - got rid of loads of code
+	this way and made easier to change for users.
++	Removed the logo image and W3C image from the footer.
++	Removed ability to remove the footer - you will have to change the code
+	now - Reason, too many people asking for help and promising some reward,
+	then not donating and generally pissing me off. So I deserve a little
+	back please :)
+
+Tuesday 20 July 2004 19:15:08
+----------------------------------------------------------------------------
++	Changed the upload paths to be a little more intuitive - should just
+	have to change the DEMO folder to the folder on your domain.
+
+Saturday 24 April 2004 14:17:03
+----------------------------------------------------------------------------
++	Mods and Admin only can login to the admin area, mods have limited
+	permissions.
++	Main admin username has been added to the database, so no longer in
+	config - default is administrator / password. You must change the
+	email for this user.
++	Tidied up more XHTML code to be quicker and compliant.
++	Added in status admin so admins can change the Urgency markers, default
+	is low, medium, high etc... Colors can be changed for these also. Order
+	effects what shows up first in the menu list.
++	Added in department admin for admins to add / delete / edit departments
++	Added in the departments so users must select one of these for there
+	ticket
++	Seperated Ticket ID and Replies and made ticket ID a big yellow button.
++	Enabled batch open close on tickets via checkboxes.
++	Redesigned look of front end - made font smaller added colors on
+	tickets labels.
++	Created better Admin for Users, can now create Admins, Moderators
+	and standard users
+
+Tuesday 13 April 2004 15:42:30
+----------------------------------------------------------------------------
++	Added a variable so the date format can be d-m-Y or whatever else
+	rocks your world.
++	Made admin section XHTML compliant, and tidied up the look of it.
++	Made the Searches integral with other bits of code - which eliminated
+	over 300 lines of code - nice.
++	Back on it again after a bit of a busy time.
+
+Sunday 14 March 2004 15:40:09
+----------------------------------------------------------------------------
++	Fixed refresh elements, so if form isnt completly filled out it
+	doesnt refresh.
++	Added in Attachments in the emails, still need to finish this off
+	may add these to a database table.
+
+Friday 12 March 2004 13:53:47
+----------------------------------------------------------------------------
++	If there are new replies the user hasnt seen since the last login
+	then it shows a star next to these. The star will remain till next
+	login, I need a better way to do this.
++	Made it so it tells you how many repies there have been to a certain
+	topic.
++	Fixed issue with File Upload Box showing up when not needed.
++	Language file completion - please check config file for this. Anybody
+	that wants to write a version please use the eng.php file in the
+	language folder as a guideline.
++	Tidying up comments on pages.
++	Added two fields in the USERS table that will track the last two
+	occasions they logged in.
++	Changing all HTML code to XHTML version 1.0, any errors with the please
+	let me know.
+
+Saturday 06 March 2004 13:05:56
+----------------------------------------------------------------------------
++	Eliminated any references to <?= changed back to <?php echo found out
+	that this shortform way is cancelled out if short tags are off in the
+	php.ini
+
+Thursday 11 December 2003 20:33:22
+----------------------------------------------------------------------------
++	Once a new ticket has been submitted it now self refreshes to the NEW
+	TICKET instead of just refreshing to the new ticket entry page again.
+	Thx a.den boer for helping point this out.
+
+Saturday 06 December 2003 14:56:53
+----------------------------------------------------------------------------
++	In the new request element added a section that displays the allowed
+	file types for upload.
++	Added in the user's Name and Email for a new support ticket
++	Added in the phpmailer Language file - ENGLISH - all this does is give
+	you the errors in english.
+
+Saturday 29 November 2003 14:10:27
+----------------------------------------------------------------------------
++	Fixed the retrun spelling mistake which created an error.
++	Checked for correctly formed email address on New Ticket submission.
++	Updated the mailer class.
++	Sorted out the Admin Footer a little better. Added scriptsearch ID, please
+	Vote - excellent!
++	Found error in sending emails, due to the new function I put into the
+	last build, basically all emails will go to the client, even the ones
+	that are meant to go to the Admins. This has been resolved.
++	Finished front Page help.
++	Made the script check for Bad usernames and passwords in the self sign up.
++	Changed the wording on the Regsitry emails, and site.
++	Rejigged the User end stylesheet so it is easier to read.
+
+Saturday 01 November 2003 - 12:29:18
+----------------------------------------------------------------------------
++	Created a SELF REGISTRATION area, this is switchable within the config
+	for admins who dont want this functionality. Verify Email will be added
+	at some point to this also.
++	Re-wrote the Auth Functions, stripped out a lot of code and improved
+	the logout session destroy.
++	Made an Email Function To Cut out a lot of code from the Main Pages
+	Enables easier Maintenance Also.
+
+Tuesday 30 September 2003 - 11:34:40
+----------------------------------------------------------------------------
++	Fixed the date display to now show the day of the month.
++	Tidied up Admin look, added in Logo and search box.
+
+Thursday 28 August 2003 - 10:43:02
+----------------------------------------------------------------------------
++	Started on the Demo intergration - this will be intergrated into the
+	package so I dont have to do two seperate systems. There will be a
+	switch in the Config file to turn this on and off, may be useful for
+	you to go through the demo mode with Clients. Demo users cannot submit
+	file attachments.
+
+Thursday 21 August 2003 - 11:05:15
+----------------------------------------------------------------------------
++	Added a User help file system - needs to be finished - will be done
+	on next version as it needs a lot of Copy.
++	Added in search Tickets at the top of every page. This will be
+	improved over the next few versions currently can only search ticket
+	subjects.
++	Priority colours are now added to the Background of the Table Cell
+	giving a quicker clearer impression of what is important.
++	Changed a lot more Double Quotes to Single Quotes to speed up the
+	PHP parsing.
++	Smartened up the look for the login areas - using some better border
+	and cellspacing control.
++	Designed new logo for PHP Support Tickets in preperation for a full
+	on support site for the application.
++	Added in Resend Account Details to the Login Area.
++	Changed the Way buttons look in the Stylesheet.
+
+Wednesday 04 June 2003 12:16:22
+----------------------------------------------------------------------------
++	Made clicking Icon open up in a new window.
++	Words Attachment, file name and Icon enable the attachment to be visible
+	against the post - some items may open direct in the browser i.e. Word
+	documents do these days.
++	Adjusted the stylesheet on the admin it was different to user side and
+	created nasty borders.
++	Added the abiliy for the Users and Administrators to assign attachments
+	to each individual post. Attachment can only happen at point of writing
+	the post at present.
++	Max File size can be set in the Browser but please also check your PHP ini
+	file to make sure File Uploads are allowed and that the max file size is
+	set high enough to satisfy your needs.
++	File array structure allows for easy Administering of what files Types
+	are allowed to be uploaded - administered in config file.
++	Allow the Script Administrators to turn off uploading within config.
+
+Tuesday 20 May 2003 10:03:13
+----------------------------------------------------------------------------
++	Added in Urgency field in User/Admin responses.
++	Have added a Message trail within the emails sent out by the User/Admin.
+	The user will now be able to look within the email at past responses.
+	It will detail the person who wrote the ticket and the date and the message.
++	Tidied up the admin email a little - now posts the Subject and date
+	in a better plain text format.
++	Added in the correct subjects to post performed by Users and by the
+	Admins - this may aid tracking.
++	Added in a META REFRESH after the posting session has ended this will
+	refresh the user to the Ticket View screen and if they hit refresh it
+	will not try and repost the data. This has been done for both Admin
+	and User sides. The refresh happens after 2 seconds so they should be
+	able to see the success message.
++	Added in Delete and Edit Icons to the user admin. Currently only the
+	delete one works as I dont hink it is too hard to enter in a new user
+	anyways. I will get the edit function to work to display more info on
+	the user also. There is now a Javascript prompt before you delete.
+
+Sunday 04 May 2003 12:43:07
+----------------------------------------------------------------------------
++	Added in the User Admin into the admin section - this will not list
+	current users - enabling the administrator to suspend them without
+	delay and Add new users to to the system. New users have a status of 1
+	suspended users a status of 2 - only users with status 1 will be allowed
+	to log into the site area.
++	Changed the way the admin is added - currently one administrator can be
+	set and this is added within the config file. Change the username and
+	password to anything you want - only this account will have access to
+	the admin section. You will need to create yourself as a user to get into
+	the users end.
+
+
+Thursday 01 May 2003 11:55:17
+----------------------------------------------------------------------------
++	Completed the admin element - so the Administrator can respond to all
+	messages sent in.
++	Adding responses to tickets completed - Administrator emailed after
+	each response id added. Now the opening page will be customer facing
+	all responses added by the Administrator will be through the Admin
+	there they will be able to see all the tickets produced by all there
+	users.
++	NewRequest completed - a logged in user will be able to write a new
+	request, the Administrator will be email the request.
++	Added in the AUTH system so I can identify users and there past posts
+	made up a table to identify users, status will be 0-off 1-normal 2-admin
++	Started the application by building from the blocks of PHP-Multiple
+	Newsletters - so the look and feel will be similar to that.

@@ -1,0 +1,94 @@
+/***************************************************************************
+File Name 	: Install.txt
+Domain		: http://www.triangle-solutions.com
+----------------------------------------------------------------------------
+Author		: Ian Warner
+Copyright	: (C) 2001 Triangle Solutions Ltd
+Email		: iwarner@triangle-solutions.com
+URL		: http://www.triangle-solutions.com/
+Description	: Describes the install procedure.
+Date Created	: Saturday 06 December 2003 15:28:50
+****************************************************************************/
+
+Install
+----------------------------------------------------------------------------
+
+Contents
+----------------------------------------------------------------------------
+A) To install PHP Support Tickets
+B) Upgrade a previous version
+C) Setting up User Accounts
+D) Using the File Upload
+
+
+A) To install PHP Support Tickets
+----------------------------------------------------------------------------
+01.	Copy all files to a sub directory within your web site.
+02.	Create a database on your MySQL installation, default for this app is
+	support_tickets (this can be changed in the config.php file, to anything you like.)
+03. 	Import the support_tickets.sql file too add the appropriate tables to your
+	MySQL database. Use PHPMyAdmin to do this.
+04.	Configure the config.php file, adding the Host, User and Password of
+	your MySQL installation, and changing any aesthetic elements you wish.
+05.	Method of sending emails is via sockets, so add appropriate info for this. In the
+	config.php file. Making sure that you SMTP Authentication set correctly. Setting
+	this to TRUE when is should be false may cause errors.
+06.	Add in the ADMIN page Username and Password to the config.php file. Browse to the
+	admin page (usally newsletter/admin/) and Click on 'Users Admin' across the top navigation.
+	Add in all the site users you wish - remembering you must add yourself in to gain access.
+07.	Make sure you add the appropriate security to the config.php and admin files. Chmod etc.
+08.	You may edit the header and footer files to your liking.
+09.	You can allow users to SELF register or not by setting the config file setting to ON or OFF.
+10.	Please send me an email - iwarner@triangle-solutions.com if you use this app.
+
+B) Upgrade a previous version
+----------------------------------------------------------------------------
+1.	Upgrading should be a case of just replacing the files within the previous
+	install.
+2.	If you have changed any of the files then you will likely have to make the same
+	changes to the new release. This is something I cannot help and it happens with
+	any software releases.
+3.	The database should always stay the same - I will state explicitly if I have
+	changed any database configuration so that you know that this needs updating.
+
+C) Setting up User Accounts
+----------------------------------------------------------------------------
+1.	To add a user log into the Admin side.
+2.	Click on 'User Admin' in the top navigation of the Admin page.
+3.	This page will display the input boxes to add a new User and list all existing
+	User of the application.
+4.	Fill in all the fields and hit submit.
+5.	Take care that the Username must be unique within the system.
+6.	The username and password must be 6-16 chars in length and contain no spaces or
+	unusual characters.
+7.	You may suspend and reactivate user accounts as you see fit - simply click on
+	the action words to the right of the user row.
+
+D) Using the File Upload
+----------------------------------------------------------------------------
+1.	This can be quite complicated to set up and may involve you having to check your
+	PHP.ini file.
+2.	Firstly in the config make sure that ALLOWATTACHMENTS is set to TRUE. This will
+	place the form on the User and Admin side underneath the response box, and also
+	allow the verification of the upload.
+3.	Set the MAXFILE size this has to be in BYTES - here I would also check your PHP.ini
+	file to make sure that firstly you allow file uploads and secondly make sure that
+	the Max File Size is set high enough for your desires. I wouldnt allow people to
+	upload files too big though! also check that your TMP UPLOAD folder is set.
+4.	Next you must set the paths to your upload folder. The first UPLOADPATH must be
+	the absolute path on the server i.e. C:/wwwroot/etc... This folder also must be
+	writable by your webusers, otherwise I cannot dump the files into that. The
+	RELATIVEPATH is used to download the items and must point to the upload folder on
+	the web side i.e. http://www.yourdomain.com/etc....
+5.	File types; the first array houses some common MIME file types and one extension for
+	each. This is important that you dont list all the common extensions as this is how I
+	name the file.
+6.	ALLOWEDTYPES indicates what files types you would like the customers to upload. Simply
+	copy the MIME type into the string, making sure you enclose it with quotes and they
+	are correctly coma seperated. Scan the internet for MIME types that you want to include.
+
+
+I hope the above is all clear if you have any problems understanding anything
+then please email me at iwarner@triangle-solutions.com, but make sure you have donated first
+if you want support!
+

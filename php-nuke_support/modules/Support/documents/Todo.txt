@@ -1,0 +1,44 @@
+/***************************************************************************
+File Name 	: ToDo.txt
+Domain		: http://www.triangle-solutions.com
+----------------------------------------------------------------------------
+Author		: Ian Warner
+Copyright	: (C) 2001 Triangle Solutions Ltd
+Email		: iwarner@triangle-solutions.com
+URL		: http://www.triangle-solutions.com/
+Description	: Describes the ToDo list
+Date Created	: Saturday 01 November 2003 - 16:36:43
+\\||************************************************************************/
+
+Todo list
+----------------------------------------------------------------------------
+
+ADMIN SIDE
++	Email the user if the Admin closes the ticket.
++	Add a system administrators announcement area. IE email all USERS
++	Let the Admin know when something has been writen to the request by
+	a visual sign on the site - same for the User.
++	Add the ability for the user to change there profile - ie change
+	password and email etc.
++	Finish of the language intergration file. So that different languages
+	may be added to the system.
++ 	Install script
++	Attach mods to certain departments, can only read tickets assigned to
+	that department.
++	Assign Mod / Admin to a certain tickets - take ownership.
++	Flag Tickets
++	Admins / Mods write notes on tickets for other admin / mods to see
+	not users
+
+USER SIDE
++	Email verifictaion on SELF REGISTRY
++	Attachment for NEW TICKET - Attachment Description
++	Sort On Headings
++ 	File Size Next To attachment and in emails
+
+OTHER
++ 	Template driven design system.
++	Wrap the text at 70 chars or what is standard
++	Edit USER
++	Check out SendMail options for the tickets
++	Use Normal Mail option also.

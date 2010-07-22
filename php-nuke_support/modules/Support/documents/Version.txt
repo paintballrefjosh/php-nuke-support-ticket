@@ -1,0 +1,18 @@
+/***************************************************************************
+File Name 	: Version.txt
+Domain		: http://www.triangle-solutions.com
+----------------------------------------------------------------------------
+Author		: Ian Warner
+Copyright	: (C) 2001 Triangle Solutions Ltd
+Email		: iwarner@triangle-solutions.com
+URL		: http://www.triangle-solutions.com/
+Description	: Describes the version number and release date.
+Date Created	: Saturday 21 August 2004 10:09:23
+File Version	: 1.8c
+\\||************************************************************************/
+
+Version
+----------------------------------------------------------------------------
+
++	Version 1.8c
++	Release Date: Saturday 21 August 2004 10:09:06
